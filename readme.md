@@ -1,3 +1,5 @@
+My customizations of urob's zmk config.
+
 # urob's zmk-config
 
 This is my personal [ZMK firmware](https://github.com/zmkfirmware/zmk/)
