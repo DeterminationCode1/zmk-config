@@ -1,4 +1,4 @@
-My customizations of urob's zmk config.
+My customizations of [urob's zmk](https://github.com/urob/zmk-config) config.
 
 # urob's zmk-config
 
