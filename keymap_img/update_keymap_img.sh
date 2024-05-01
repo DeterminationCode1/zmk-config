@@ -15,5 +15,4 @@ echo 'Parsing ZMK keymap...'
 # ./keymap_img_adjuster.py keymap.yaml
 
 echo '\n\nDrawing keymap...'
-keymap -c keymap_config.yaml draw --qmk-keyboard crkbd/rev1 --qmk-layout LAYOUT_split_3x5_3 manual3x5_keymap.yaml -s BASE NAV NUM FUN SYS  > keymap.svg
-
+keymap -c keymap_config.yaml draw --qmk-keyboard crkbd/rev1 --qmk-layout LAYOUT_split_3x5_3 manual3x5_keymap.yaml -s BASE NAV NUM FUN SYS >keymap.svg
