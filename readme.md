@@ -1,4 +1,5 @@
 My customizations of [urob's zmk](https://github.com/urob/zmk-config) config.
+<<<<<<< HEAD
 
 # My Version History modifications
 
@@ -9,6 +10,8 @@ My customizations of [urob's zmk](https://github.com/urob/zmk-config) config.
 - removed homerow mods from Funktino layer left half on volume up/down keys
   - reason: I didn't need them and they were blocking the hold repeat.
 - fixed bugs: always use short form of modifiers in zmk if you combine them. e.g. LS(F) rather than `LSHIFT(F)`.
+=======
+>>>>>>> 6cad169 (minor layout fixes. implemented keyboard drawer)
 
 # urob's zmk-config
 
