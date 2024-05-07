@@ -15,7 +15,7 @@ layers:
     - {h: Alt, t: Delete, type: ghost}
   NAV:
     - [{t: "Q tra", type: "trans"},{t: W, type: trans}, "LS(Tab)", "swapper", {t: B, type: trans}, "Page Up", '⌫', Enter, "⌦", {t: "\"", type: trans}]
-    - ["Alt (stick)", "Cmd (stic)", "⇧ (stick)", "Ctrl (stick)", "tra G", "Page Down", {t: ←, h: '←←'}, {t: '↓', h: '↓↓'}, {t: '↑', h: '↑↑'}, {t: '→', h: '→→'} ]
+    - ["Alt (stick)", "Cmd (stic)", "⇧ (stick)", "Ctrl (stick)", {t: G, type: 'trans'}, "Page Down", {t: ←, h: '←←'}, {t: '↓', h: '↓↓'}, {t: '↑', h: '↑↑'}, {t: '→', h: '→→'} ]
     - [{t: '___', type: trans}, {t: '___', type: trans}, {t: '___', type: trans}, {t: '___', type: trans}, {t: '___', type: trans}, Insert, Tab, "<", ">", {t: '___', type: trans}]
     - {h: Cmd, t: ↹, type: ghost} # thumb key Left 1
     - {h: '', t: PRESSED, type: held} # thumb key Left 2
@@ -25,11 +25,21 @@ layers:
     - {h: Alt, t: ⌦, type: ghost}
   NUM:
     - [{t: "Q", type: trans},'7', '8', "9", {t: ___, type: trans}, "Page Up", '⌫', Enter, "⌦", {t: "\"", type: trans}]
-    - [{h: Alt, t: '0'}, {h: Cmd, t: '1'}, {h: ⇧, t: '2'}, {h: Ctrl, t: '3'}, "tra G", "Page Down", {t: ←, h: '←←'}, {t: '↓', h: '↓↓'}, {t: '↑', h: '↑↑'}, {t: '→', h: '→→'} ]
+    - [{h: Alt, t: '0'}, {h: Cmd, t: '1'}, {h: ⇧, t: '2'}, {h: Ctrl, t: '3'}, {t: G, type: trans}, "Page Down", {t: ←, h: '←←'}, {t: '↓', h: '↓↓'}, {t: '↑', h: '↑↑'}, {t: '→', h: '→→'} ]
     - [{t: '___', type: trans}, '4', '5', '6', {t: '___', type: trans}, Insert, Tab, "<", ">", {t: '___', type: trans}]
     - {h: Cmd, t: ↹, type: ghost} # thumb key Left 1
     - {h: '', t: NAV, type: trans} # thumb key Left 2
     - {h: FUN, t: ⏎, type: trans}
+    - {t: PRESSED, type: held}
+    - {t: '?Cancel', type: trans}
+    - {h: Alt, t: ⌦, type: ghost}
+  SYS:
+    - [{t: 'BT 0'},{t: 'BT 1'}, {t: 'BT 2'}, t: 'BT 3', {t: 'Clear a BT Profile'},{t: ___, type: trans}, {t: ___, type: trans}, {t: ___, type: trans}, {t: ___, type: trans}, {t: ___, type: trans}]
+    - [{t: ___, type: trans},{t: ___, type: trans}, {t: ___, type: trans}, {t: ___, type: trans}, {t: Boot},{t: 'Boot'}, {t: ___, type: trans}, {t: ___, type: trans}, {t: ___, type: trans}, {t: ___, type: trans}]
+    - [{t: ___, type: trans},{t: ___, type: trans}, {t: ___, type: trans}, {t: ___, type: trans}, {t: 'SysReset'},{t: 'SysReset'}, {t: ___, type: trans}, {t: ___, type: trans}, {t: ___, type: trans}, {t: ___, type: trans}]
+    - {h: Cmd, t: ↹, type: ghost} # thumb key Left 1
+    - {h: '', t: NAV, type: trans} # thumb key Left 2
+    - {t: PRESSED, type: held}
     - {t: PRESSED, type: held}
     - {t: '?Cancel', type: trans}
     - {h: Alt, t: ⌦, type: ghost}
@@ -87,7 +97,6 @@ combos:
 # only nav layer
   - {p: [26,27], k: '{', l: ['NAV']}
   - {p: [27,28], k: '}', l: ['NAV']}
-
 
 
 # Not use ==========================
