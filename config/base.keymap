@@ -206,12 +206,12 @@ ZMK_TAP_DANCE(copy_cut,
     bindings = <&kp LG(C)>, <&kp LG(X)>;
 )
 
-// // Windows sleep key. Not neede on Mac.
-// ZMK_MACRO(win_sleep,
-//     wait-ms = <500>;
-//     tap-ms = <50>;
-//     bindings = <&kp LG(X) &kp U &kp S>;
-// )
+// Windows sleep key. Not neede on Mac.
+ZMK_MACRO(win_sleep,
+    wait-ms = <500>;
+    tap-ms = <50>;
+    bindings = <&kp LG(X) &kp U &kp S>;
+)
 
 // misc aliases
 #define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
