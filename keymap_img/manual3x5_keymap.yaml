@@ -16,7 +16,7 @@ layers:
   NAV:
     - [{t: "Q tra", type: "trans"},{t: W, type: trans}, "LS(Tab)", "swapper", {t: B, type: trans}, "Page Up", '⌫', Enter, "⌦", {t: "\"", type: trans}]
     - ["Alt (stick)", "d (stic)", "⇧ (stick)", "Ctrl (stick)", {t: G, type: 'trans'}, "Page Down", {t: ←, h: '←←'}, {t: '↓', h: '↓↓'}, {t: '↑', h: '↑↑'}, {t: '→', h: '→→'} ]
-    - [{t: '___', type: trans}, {t: '___', type: trans}, {t: '___', type: trans}, {t: '___', type: trans}, {t: '___', type: trans}, Insert, Tab, "<", ">", {t: '𓍯'}]
+    - [{t: '___', type: trans}, {t: '___', type: trans}, {t: '___', type: trans}, {t: '𓍯'}, {t: '___', type: trans}, Insert, Tab, "<", ">", {t: '___', type: trans}]
     - {h: ⌘, t: ↹, type: ghost} # thumb key Left 1
     - {h: '', t: PRESSED, type: held} # thumb key Left 2
     - {h: FUN, t: ⏎, type: trans}
