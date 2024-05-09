@@ -17,6 +17,7 @@ My customizations of [urob's zmk](https://github.com/urob/zmk-config) config.
 
 ### 0.3 - from 2024-05-09
 - added `lasso copy` key on navigation layer. 
+  - Positioned on left hand -> good for right hand mouse usage.
   - took the place of a transparent ? key.
 - removed homerow mods from Funktino layer left half on volume up/down keys
   - reason: I didn't need them and they were blocking the hold repeat.
