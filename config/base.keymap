@@ -224,7 +224,7 @@ ZMK_TAP_DANCE(copy_cut,
 #define VOL_DOWN    &kp C_VOL_DN
 // #define VOL_UP      &hmr RCMD C_VOL_UP // ! Me: Original vol up from urob. But don't need hmr and blocked repeat hit..
 #define VOL_UP      &kp C_VOL_UP
-#define LASSO_COPY  &kp LG(LC(LS(4)))
+#define LASSO_COPY  &kp LG(LC(LS(N4)))
 
 /* Keymap */
 
