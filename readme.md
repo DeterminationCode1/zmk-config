@@ -1,5 +1,14 @@
 My customizations of [urob's zmk](https://github.com/urob/zmk-config) config.
 
+# My Version History modifications
+
+### 0.3 - from 2024-05-09
+- added `lasso copy` key on navigation layer. 
+  - took the place of a transparent ? key.
+- removed homerow mods from Funktino layer left half on volume up/down keys
+  - reason: I didn't need them and they were blocking the hold repeat.
+- fixed bugs: always use short form of modifiers in zmk if you combine them. e.g. LS(F) rather than `LSHIFT(F)`.
+
 # urob's zmk-config
 
 This is my personal [ZMK firmware](https://github.com/zmkfirmware/zmk/)
