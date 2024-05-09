@@ -5,9 +5,9 @@ layout:
 layers:
   BASE:
     - [Q, W, F, P, B, J, L, U, Y, {t: "'", s: "\""}] # top row R and L
-    - [{h: Alt, t: A}, {h: Cmd, t: R}, {h: ⇧, t: S}, {h: Ctrl, t: T}, G, M, {h: Ctrl, t: N}, {h: ⇧, t: E}, {h: Cmd, t: I}, {h: Alt, t: O}]
+    - [{h: Alt, t: A}, {h: ⌘, t: R}, {h: ⇧, t: S}, {h: Ctrl, t: T}, G, M, {h: Ctrl, t: N}, {h: ⇧, t: E}, {h: ⌘, t: I}, {h: Alt, t: O}]
     - [Z, X, C, D, V, K, H, {t: ",", s: ";"}, {t: "." , s: ":" }, {t: "?", s: "!"}]
-    - {h: Cmd,   t: Tab, type: ghost} # thumb key Left 1
+    - {h: ⌘,   t: Tab, type: ghost} # thumb key Left 1
     - {h: NAV,  t: ⎵, s: '.⎵stick ⇧'} # thumb key Left 2. space + shift -> morphs into . space stick shift
     - {h: FUN,   t: ⏎}
     - {t: "Sm Num"}
@@ -15,9 +15,9 @@ layers:
     - {h: Alt, t: Delete, type: ghost}
   NAV:
     - [{t: "Q tra", type: "trans"},{t: W, type: trans}, "LS(Tab)", "swapper", {t: B, type: trans}, "Page Up", '⌫', Enter, "⌦", {t: "\"", type: trans}]
-    - ["Alt (stick)", "Cmd (stic)", "⇧ (stick)", "Ctrl (stick)", {t: G, type: 'trans'}, "Page Down", {t: ←, h: '←←'}, {t: '↓', h: '↓↓'}, {t: '↑', h: '↑↑'}, {t: '→', h: '→→'} ]
-    - [{t: '___', type: trans}, {t: '___', type: trans}, {t: '___', type: trans}, {t: '___', type: trans}, {t: '___', type: trans}, Insert, Tab, "<", ">", {t: '___', type: trans}]
-    - {h: Cmd, t: ↹, type: ghost} # thumb key Left 1
+    - ["Alt (stick)", "d (stic)", "⇧ (stick)", "Ctrl (stick)", {t: G, type: 'trans'}, "Page Down", {t: ←, h: '←←'}, {t: '↓', h: '↓↓'}, {t: '↑', h: '↑↑'}, {t: '→', h: '→→'} ]
+    - [{t: '___', type: trans}, {t: '___', type: trans}, {t: '___', type: trans}, {t: '___', type: trans}, {t: '___', type: trans}, Insert, Tab, "<", ">", {t: '𓍯'}]
+    - {h: ⌘, t: ↹, type: ghost} # thumb key Left 1
     - {h: '', t: PRESSED, type: held} # thumb key Left 2
     - {h: FUN, t: ⏎, type: trans}
     - {t: "Sm Num", type: trans}
@@ -25,24 +25,35 @@ layers:
     - {h: Alt, t: ⌦, type: ghost}
   NUM:
     - [{t: "Q", type: trans},'7', '8', "9", {t: ___, type: trans}, "Page Up", '⌫', Enter, "⌦", {t: "\"", type: trans}]
-    - [{h: Alt, t: '0'}, {h: Cmd, t: '1'}, {h: ⇧, t: '2'}, {h: Ctrl, t: '3'}, {t: G, type: trans}, "Page Down", {t: ←, h: '←←'}, {t: '↓', h: '↓↓'}, {t: '↑', h: '↑↑'}, {t: '→', h: '→→'} ]
+    - [{h: Alt, t: '0'}, {h: ⌘, t: '1'}, {h: ⇧, t: '2'}, {h: Ctrl, t: '3'}, {t: G, type: trans}, "Page Down", {t: ←, h: '←←'}, {t: '↓', h: '↓↓'}, {t: '↑', h: '↑↑'}, {t: '→', h: '→→'} ]
     - [{t: '___', type: trans}, '4', '5', '6', {t: '___', type: trans}, Insert, Tab, "<", ">", {t: '___', type: trans}]
-    - {h: Cmd, t: ↹, type: ghost} # thumb key Left 1
+    - {h: ⌘, t: ↹, type: ghost} # thumb key Left 1
     - {h: '', t: NAV, type: trans} # thumb key Left 2
     - {h: FUN, t: ⏎, type: trans}
     - {t: PRESSED, type: held}
     - {t: '?Cancel', type: trans}
     - {h: Alt, t: ⌦, type: ghost}
+  FUN:
+    - [{t: F12},{t: F12},{t: F12},{t: F12}, {t: ___, type: trans}, {t: ___, type: trans}, {t: ⏮}, {t: '☀↓'},{t: '☀↑'},{t: ⏭}]
+    - [{ t: F11, h: ALT}, { t: F4,h: ⌘}, {t: F5, h: ⇧}, { t: F6,h: CTRL}, {t: ___, type: trans}, {t: ___, type: trans}, {t: 'DSK_PREV', h: CTRL}, {t: '🔈'},{t: '🔊'},{t: 'DSK_NEXT', h: ALT}]
+    - [{t: F10},{t: F1},{t: F2},{t: F3}, {t: ___, type: trans}, {t: 'PIN_APP'},{t: 'PIN_WIN'}, {t: 'DSK_MANAGER'}, {t: ___, type: trans},{t: '💤'}]
+    - {t: ___, type: trans}
+    - {t: ___, type: trans}
+    - {t: PRESSED, type: held}
+    - {t: '🔇'}
+    - {t: '⏯'}
+    - {t: ___, type: trans}
   SYS:
     - [{t: 'BT 0'},{t: 'BT 1'}, {t: 'BT 2'}, t: 'BT 3', {t: 'Clear a BT Profile'},{t: ___, type: trans}, {t: ___, type: trans}, {t: ___, type: trans}, {t: ___, type: trans}, {t: ___, type: trans}]
-    - [{t: ___, type: trans},{t: ___, type: trans}, {t: ___, type: trans}, {t: ___, type: trans}, {t: Boot},{t: 'Boot'}, {t: ___, type: trans}, {t: ___, type: trans}, {t: ___, type: trans}, {t: ___, type: trans}]
+    - [{t: '___', type: trans},{t: ___, type: trans}, {t: ___, type: trans}, {t: ___, type: trans}, {t: Boot},{t: 'Boot'}, {t: ___, type: trans}, {t: ___, type: trans}, {t: ___, type: trans}, {t: ___, type: trans}]
     - [{t: ___, type: trans},{t: ___, type: trans}, {t: ___, type: trans}, {t: ___, type: trans}, {t: 'SysReset'},{t: 'SysReset'}, {t: ___, type: trans}, {t: ___, type: trans}, {t: ___, type: trans}, {t: ___, type: trans}]
-    - {h: Cmd, t: ↹, type: ghost} # thumb key Left 1
+    - {h: ⌘, t: ↹, type: ghost} # thumb key Left 1
     - {h: '', t: NAV, type: trans} # thumb key Left 2
     - {t: PRESSED, type: held}
     - {t: PRESSED, type: held}
     - {t: '?Cancel', type: trans}
     - {h: Alt, t: ⌦, type: ghost}
+  
 
 # ========= Docs on Combos ===================
 # official docs > scroll down to middle "combos" https://pypi.org/project/keymap-drawer/#command-line-tool-installation
@@ -114,7 +125,7 @@ combos:
   #   - ["!", "@", "#", "$", "%", "\\", "7", "8", "9", ","]
   #   - ["+", "=", "_", "-", "^", "0", "4", "5", "6", "."]
   #   - [null, null, "¿", "*", "&", ";", "1", "2", "3", "/"]
-  #   - {t: Cmd, type: ghost}
+  #   - {t: ⌘, type: ghost}
   #   - Space
   #   - {t: Bspace, h: FUN}
   #   - {type: held}
