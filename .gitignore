@@ -11,3 +11,7 @@ zmk
 # Ignore keymap-drawer output for now
 draw/base.svg
 draw/base.yaml
+# Ignore python env for `keyboard-drawer` lib.
+**/env/**/*
+
+.DS_Store
