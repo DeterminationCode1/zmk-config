@@ -15,6 +15,36 @@ My customizations of [urob's zmk](https://github.com/urob/zmk-config) config.
 
 # My Version History modifications
 
+## Branch: Glove80-urob
+
+Predecessor: Urob (main)
+Idea: urob's standard layout (on the glove80 at least) caused my left thumb  and index finger to hurt after 2 weeks. Also, the right thumb and index finger were experienencing high loads and were eching. 
+
+### Possible new ideas:
+- using central repeat key to repeat everythinng like page up/down etc.
+- keep using the smart num layer -> assign symbols and modmporth symbols to number row of glove80.
+
+### 0.1 - from 2024-05-23
+
+List of experienced problems
+- Homerow mods (especially the ctrl on the index fingers): chording / holding keys is by far the most strainuous task for a finger and causes the most damage. The homerow mods are nice to use but unfortunately I believe not very ergonomic
+- combos: symbol layer combos like `(` and `[` (right index + middle finger) are very uncomfortable to use on the glove80 as the keys have different depths.
+- Nav layer: the work for the right index finger is extreme: backspace and shift. Also, the left thumb must be hold pressed down to activate the symbol layer and caused damage in the left hand.
+Solution: Modify urob's original layer to utilise the extra keys available on the glove80 to distribute load away from the right and left thumb and index finger.
+
+Fixes:
+- use extra outer pinky rows on glove80 for common keys.
+- less utilize the right and left thumb cluster. the thumb spacing just doesn't work for my hands... 
+- utilize the extra bottom row on glove80
+- use sticky shift, ctrl, command on the pink rows instead of homerow mods
+
+Behaviour fixes:
+- switch between keyboards (glove80, microsoft sculpture) every 3 hours. So your finger can adjust to the new glove80 
+- try holding down keys by rotating your hand to shift weight on the pressed key. Try using your whol hand and not a single finger to hold down a key.
+  - e.g. press right thumb kyes with the Handballen
+
+## Main (urob) branch
+
 ### 0.3 - from 2024-05-09
 - added `lasso copy` key on navigation layer. 
   - Positioned on left hand -> good for right hand mouse usage.
