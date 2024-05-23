@@ -6,3 +6,8 @@ firmware
 zephyr
 zmk
 draw/base.yaml
+
+# Ignore python env for `keyboard-drawer` lib.
+**/env/**/*
+
+.DS_Store
