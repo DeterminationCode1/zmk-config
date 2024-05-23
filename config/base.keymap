@@ -255,7 +255,7 @@ ZMK_LAYER(nav,
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
 )
 
-// BE AWARE: originally the `&win_sleep` was used at position RB4 to hit sleep on windows. But om mac the `C_POWER` is used for sleep.
+// BE AWARE: originally the `&win_sleep` was used at position RB4 to hit sleep on windows. But om mac the `C_POWER` is used for turning computer off.
 ZMK_LAYER(fn,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
     X_LT     &kp F12       &kp F7        &kp F8        &kp F9        ___             X_MT     ___           &kp C_PREV   &kp C_BRI_DN  &kp C_BRI_UP  &kp C_NEXT      X_RT
