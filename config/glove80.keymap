@@ -15,15 +15,16 @@
 #include "zmk-helpers/key-labels/glove80.h"
 
 
-// reuse basic mod-morph scheme. Copied from urob base.keymap
+/* reuse basic mod-morph scheme. Copied from urob base.keymap */
 #define SIMPLE_MORPH(NAME, MOD, BINDING1, BINDING2) \
     ZMK_MOD_MORPH(NAME, \
         mods = <(MOD_L ## MOD|MOD_R ## MOD)>; \
         bindings = <BINDING1>, <BINDING2>; \
     )
-// ---------------- Me: special morphs for 'glove80-urob' -----------------
+
+/* ---------------- Me: special morphs for 'glove80-urob' --------------- */
 SIMPLE_MORPH(slash_morph, SFT, &kp SLASH, &kp PIPE)
-// ---------------- END --------------------------------- //
+/* ---------------- END --------------------------------- */
 
 
 
