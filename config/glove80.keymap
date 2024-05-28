@@ -15,26 +15,12 @@
 #include "zmk-helpers/key-labels/glove80.h"
 
 
-/* reuse basic mod-morph scheme. Copied from urob base.keymap 
-#define SIMPLE_MORPH(NAME, MOD, BINDING1, BINDING2) \
-    ZMK_MOD_MORPH(NAME, \
-        mods = <(MOD_L ## MOD|MOD_R ## MOD)>; \
-        bindings = <BINDING1>, <BINDING2>; \
-    )
-*/
-
-/* FIX: not working. no idea why. */
-/* ---------------- Me: special morphs for 'glove80-urob' --------------- */
-/* SIMPLE_MORPH(slash_morph, SFT, &kp SLASH, &kp PIPE) */
-/* ---------------- END --------------------------------- */
-
-
-
 /* map the Glove's extra keys */
 #define X_LT  \
                 &kp F1    &kp F2 &kp F3 &kp F4 &kp F5                 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 \
                 &kp EQUAL &kp N1 &kp N2 &kp N3 &kp N4 &kp N5   &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS \
                 &kp TAB
+
 #define X_RT    &kp SHLASH
 
 #define X_LM    &kp ESC
@@ -42,7 +28,7 @@
 
 #define X_LB    &kp GRAVE
 /* &sl NAV on the RH might be nice too with the repeate key... */
-#define X_MB    &kp RETURN &sl FN &none       &none &none &key_repeat
+#define X_MB    &kp RETURN &sl NAV &sl FN       &none &none &key_repeat
 #define X_RB    &sk LGUI
 
 #define X_LH    &sk LALT &kp BSPC &kp MINUS &kp LEFT &kp RIGHT
