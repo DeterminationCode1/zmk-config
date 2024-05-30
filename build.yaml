@@ -18,3 +18,9 @@ include:
   - board: corneish_zen_v2_right
   - board: glove80_lh
   - board: glove80_rh
+  # -------- added by me for chocofi --------------
+  # Beekeeb docs for nice nano display https://docs.beekeeb.com/other-guides/how-to-install-display-battery-and-test-the-wireless-corne-keyboard#troubleshooting-1-my-nice-view-doesnt-display-any-graphics-after-flashing-a-custom-firmware
+  - board: nice_nano_v2
+    shield: corne_left nice_view_adapter nice_view
+  - board: nice_nano_v2
+    shield: corne_right nice_view_adapter nice_view
