@@ -213,10 +213,29 @@ ZMK_TAP_DANCE(copy_cut,
 //     bindings = <&kp LG(X) &kp U &kp S>;
 // )
 
+// Me: my own hold tap keys
+// tap: qustion mark | tap+shift exclamation | hold: page down
+ZMK_HOLD_TAP(qexcl_pagedn,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&qexcl>, <&kp PG_DN>;
+)
+// tap: z |backspace
+ZMK_HOLD_TAP(z_bscp,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&kp Z>, <&kp BSPC>;
+)
+
 // misc aliases
 #define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
-#define DSK_PREV    &hmr LCTRL LG(LC(LEFT))   // previous desktop
-#define DSK_NEXT    &hmr LCMD LG(LC(RIGHT)) // next     desktop
+// Me: modified dsp_prev and dsp_next to be used for window nav with the windo  manaer like i3.
+// #define DSK_PREV    &hmr LCTRL LG(LC(LEFT))   // previous desktop
+// #define DSK_NEXT    &hmr LCMD LG(LC(RIGHT)) // next     desktop
+#define WIN_PREV    &hmr LCTRL LA(LEFT)   // previous window
+#define WIN_NEXT    &hmr LCMD LA(RIGHT)  // next window
 #define PIN_WIN     &kp LG(LC(LS(Q)))        // pin window across desktops
 #define PIN_APP     &kp LG(LC(LS(A)))        // pin application across desktops
 #define DSK_MGR     &kp LA(GRAVE)            // desktop manager
@@ -237,7 +256,7 @@ ZMK_LAYER(base,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &hml LCMD A   &hml LALT R   &hml LSHFT S  &hml LCTRL T  &kp G           X_MM     &kp M         &hmr LCTRL N  &hmr RSHFT E  &hmr LALT I   &hmr LCMD O     X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &kp Z         &kp X         &kp C         &kp D         &kp V           X_MB     &kp K         &kp H         &comma_morph  &dot_morph    &qexcl          X_RB
+    X_LB     &z_bscp         &kp X         &kp C         &kp D         &kp V           X_MB     &kp K         &kp H       &comma_morph  &dot_morph    &qexcl_pagedn   X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
     X_LH                                               &lt_spc NAV 0 &lt FN RET      X_MH     SMART_NUM     &smart_shft                                               X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
@@ -245,11 +264,11 @@ ZMK_LAYER(base,
 
 ZMK_LAYER(nav,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     ___           ___           &kp LS(TAB)   &swapper      ___             X_MT     &kp PG_UP     NAV_BSPC     &kp RET        NAV_DEL      ___              X_RT
+    X_LT     ___           ___           &kp LS(TAB)   &swapper      ___             X_MT     &kp PG_UP     NAV_BSPC     &kp RET        NAV_DEL      &kp LBKT         X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &sk LCMD      &sk LALT      &sk LSHFT     &sk LCTRL     ___             X_MM     &kp PG_DN     NAV_LEFT      NAV_DOWN      NAV_UP       NAV_RIGHT        X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     ___           ___           ___           LASSO_COPY    ___             X_MB     &kp INS       &kp TAB       &kp LT        &kp GT       ___              X_RB
+    X_LB     ___           ___           ___           LASSO_COPY    ___             X_MB     &kp INS       &kp TAB       &kp LT        &kp GT       &kp LPAR         X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
     X_LH                                               ___           ___             X_MH     ___           CANCEL                                                    X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
@@ -260,9 +279,9 @@ ZMK_LAYER(fn,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
     X_LT     &kp F12       &kp F7        &kp F8        &kp F9        ___             X_MT     ___           &kp C_PREV   &kp C_BRI_DN  &kp C_BRI_UP  &kp C_NEXT      X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &hml LCMD F11 &hml LALT F1  &hml LSHFT F2 &hml LCTRL F3 ___             X_MM     ___           DSK_PREV      VOL_DOWN      VOL_UP         DSK_NEXT      X_RM
+    X_LM     &hml LCMD F11 &hml LALT F1  &hml LSHFT F2 &hml LCTRL F3 ___             X_MM     ___           WIN_PREV      VOL_DOWN      VOL_UP         WIN_NEXT      X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &kp F10       &kp F4        &kp F5        &kp F6        ___             X_MB     PIN_APP       PIN_WIN       DSK_MGR       ___           &kp C_POWER    X_RB
+    X_LB     &kp F10       &kp F4        &kp F5        &kp F6        ___             X_MB     PIN_APP       &kp LBRC       &kp LPAR       &kp LBKT   &kp C_POWER    X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
     X_LH                                               ___           ___             X_MH     &kp C_MUTE    &kp C_PP                                                  X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
