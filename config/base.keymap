@@ -213,21 +213,23 @@ ZMK_TAP_DANCE(copy_cut,
 //     bindings = <&kp LG(X) &kp U &kp S>;
 // )
 
-// Me: my own hold tap keys
-// tap: qustion mark | tap+shift exclamation | hold: page down
-ZMK_HOLD_TAP(qexcl_pagedn,
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-    bindings = <&qexcl>, <&kp PG_DN>;
-)
-// tap: z |backspace
-ZMK_HOLD_TAP(z_bscp,
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-    bindings = <&kp Z>, <&kp BSPC>;
-)
+// // Me: my own hold tap keys
+// // tap: qustion mark | tap+shift exclamation | hold: page down
+// ZMK_HOLD_TAP(qexcl_pagedn,
+//     flavor = "balanced";
+//     tapping-term-ms = <200>;
+//     quick-tap-ms = <QUICK_TAP_MS>;
+//     bindings = <&qexcl>, <&kp PG_DN>;
+// )
+// // tap: z |backspace
+// ZMK_HOLD_TAP(z_bscp,
+//     flavor = "balanced";
+//     tapping-term-ms = <200>;
+//     quick-tap-ms = <QUICK_TAP_MS>;
+//     bindings = <&kp Z>, <&kp BSPC>;
+// )
+#define Z_BSPC  &mt Z LA(BSPC)
+#define QEXCL_PAGE_DN  &mt &qexcl PG_DN
 
 // misc aliases
 #define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
@@ -256,7 +258,7 @@ ZMK_LAYER(base,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &hml LCMD A   &hml LALT R   &hml LSHFT S  &hml LCTRL T  &kp G           X_MM     &kp M         &hmr LCTRL N  &hmr RSHFT E  &hmr LALT I   &hmr LCMD O     X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &z_bscp         &kp X         &kp C         &kp D         &kp V           X_MB     &kp K         &kp H       &comma_morph  &dot_morph    &qexcl_pagedn   X_RB
+    X_LB     Z_BSPC         &kp X         &kp C         &kp D         &kp V           X_MB     &kp K         &kp H       &comma_morph  &dot_morph    QEXCL_PAGE_DN    X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
     X_LH                                               &lt_spc NAV 0 &lt FN RET      X_MH     SMART_NUM     &smart_shft                                               X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
