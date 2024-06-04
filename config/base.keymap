@@ -215,6 +215,7 @@ ZMK_TAP_DANCE(copy_cut,
 
 // // Me: my own hold tap keys
 // // tap: qustion mark | tap+shift exclamation | hold: page down
+ZMK_HOLD_TAP(mt_qexcl, bindings = <&kp>, <&qexcl>; MT_CORE)
 // ZMK_HOLD_TAP(qexcl_pagedn,
 //     flavor = "balanced";
 //     tapping-term-ms = <200>;
@@ -228,9 +229,8 @@ ZMK_TAP_DANCE(copy_cut,
 //     quick-tap-ms = <QUICK_TAP_MS>;
 //     bindings = <&kp Z>, <&kp BSPC>;
 // )
-#define Z_BSPC  &mt Z LA(BSPC)
-#define QEXCL_PAGE_DN  &mt &qexcl PG_DN
-
+#define Z_BSPC  &mt  LA(BSPC) Z
+#define QEXCL_PAGE_DN  &mt_qexcl PG_DN 0 
 // misc aliases
 #define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
 // Me: modified dsp_prev and dsp_next to be used for window nav with the windo  manaer like i3.
@@ -293,7 +293,7 @@ ZMK_LAYER(num,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
     X_LT     ___           &kp N7        &kp N8        &kp N9        ___             X_MT     ___           ___           ___           ___           ___             X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &hml LCMD N0  &hml LCMD N1  &hml LSHFT N2 &hml LCTRL N3 ___             X_MM     ___           ___           ___           ___           ___             X_RM
+    X_LM     &hml LCMD N0  &hml LALT N1  &hml LSHFT N2 &hml LCTRL N3 ___             X_MM     ___           ___           ___           ___           ___             X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     ___           &kp N4        &kp N5        &kp N6        ___             X_MB     ___           ___           ___           ___           ___             X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
