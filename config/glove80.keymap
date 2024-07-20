@@ -14,10 +14,10 @@
 
 #include "zmk-helpers/key-labels/glove80.h"
 
-
+// Me: LA(R)=go to wezterm LA(S)=go to chrome. GRAVE
 /* map the Glove's extra keys */
 #define X_LT  \
-                &kp F1    &kp F2 &kp F3 &kp F4 &kp F5                 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 \
+                &kp F1    &kp F2 &kp F3 &kp LA(R) &kp LA(S)                 &kp F6 &kp GRAVE &kp F8 &kp F9 &kp F10 \
                 &kp EQUAL &kp N1 &kp N2 &kp N3 &kp N4 &kp N5   &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS \
                 &kp TAB
 
@@ -26,10 +26,13 @@
 #define X_LM    &kp ESC
 #define X_RM    &sk LCTRL
 
-#define X_LB    &kp GRAVE
+// #define X_LB    &kp GRAVE
+#define X_LB    &sk LSHIFT
+
 /* &sl NAV on the RH might be nice too with the repeat key... */
 #define X_MB    &kp RETURN &sl NAV &sl FN       &none &none &key_repeat
-#define X_RB    &sk LGUI
+#define X_RB    &sk LALT
+// #define X_RB    &sk LGUI // Me: Could remove cmd through Karabiner softwar remap of all possible cmd to ctrl
 
 #define X_LH    &sk LALT &kp BSPC &kp MINUS &kp LEFT &kp RIGHT
 #define X_MH    &kp PG_UP &kp PG_DN
