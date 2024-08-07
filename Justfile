@@ -1,6 +1,7 @@
 default:
     @just --list --unsorted
 
+<<<<<<< HEAD
 config := absolute_path('config')
 build := absolute_path('.build')
 out := absolute_path('firmware')
@@ -87,10 +88,24 @@ draw:
     keymap -c "{{ draw }}/config.yaml" parse -z "{{ config }}/base.keymap" --virtual-layers Combos >"{{ draw }}/base.yaml"
     yq -Yi '.combos.[].l = ["Combos"]' "{{ draw }}/base.yaml"
     keymap -c "{{ draw }}/config.yaml" draw "{{ draw }}/base.yaml" -k "ferris/sweep" >"{{ draw }}/base.svg"
+=======
+# build firmware
+build:
+    echo "Building firmware..."
+
+# clear build cache
+clean:
+    rm -rf build
+
+# list all build targets
+list:
+    echo "TBD"
+>>>>>>> 957df25 (Set up dev environment)
 
 # initialize west
 init:
     west init -l config
+<<<<<<< HEAD
     west update --fetch-opt=--filter=blob:none
     west zephyr-export
 
@@ -134,3 +149,15 @@ test $testpath *FLAGS:
     if [[ "{{ FLAGS }}" == *"--auto-accept"* ]]; then
         cp ${build_dir}/keycode_events.log ${config_dir}/keycode_events.snapshot
     fi
+=======
+    west update
+    west zephyr-export
+
+# upgrade west
+upgrade:
+    west update
+
+# upgrade zephyr
+upgrade-zephyr:
+    nix flake update --flake .
+>>>>>>> 957df25 (Set up dev environment)
