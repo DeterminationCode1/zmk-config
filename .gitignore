@@ -11,3 +11,8 @@ draw/base.yaml
 **/env/**/*
 
 .DS_Store
+.direnv
+.venv
+.west
+modules
+zmk
