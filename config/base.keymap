@@ -182,13 +182,6 @@ ZMK_MOD_MORPH(bs_del, bindings = <&kp BSPC>, <&kp DEL>;
 ZMK_TAP_DANCE(copy_cut, tapping - term - ms = <200>;
               bindings = <&kp LG(C)>, <&kp LG(X)>;)
 
-// // Windows sleep key. Not neede on Mac.
-// ZMK_MACRO(win_sleep,
-//     wait-ms = <500>;
-//     tap-ms = <50>;
-//     bindings = <&kp LG(X) &kp U &kp S>;
-// )
-
 // Sticky shift + leader
 ZMK_MACRO(leader_sft, bindings = < &sk LSHFT & leader > ;)
 
@@ -282,8 +275,6 @@ ZMK_LAYER(
     // ╰─────────────┴─────────────╯ ╰──────╯
 )
 
-// BE AWARE: originally the `&win_sleep` was used at position RB4 to hit sleep
-// on windows. But om mac the `C_POWER` is used for sleep.
 ZMK_LAYER(
     fn,
     // ╭──────╮
@@ -292,27 +283,26 @@ ZMK_LAYER(
     // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
     // ╭──────╮
     X_LT &kp F12 &kp F7 &kp F8 &kp F9 ___
-        X_MT ___ &kp C_PREV &kp C_BRI_DN &kp C_BRI_UP &kp C_NEXT X_RT
+        X_MT ___ &kp C_PREV &kp C_VOL_UP &kp C_NEXT &kp SYSTEM_SLEEP X_RT
     // ├──────┤
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     // ├──────┤
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     // ├──────┤
-    X_LM &hml LCMD F11 &hml LALT F1 &hml LSHFT F2 &hml LCTRL F3 ___ X_MM ___
-        DSK_PREV VOL_DOWN VOL_UP DSK_NEXT X_RM
+    X_LM &hml LGUI F11 &hml LALT F4 &hml LSHFT F5 &hml LCTRL F6 ___ X_MM ___
+        DSK_PREV VOL_DOWN DSK_NEXT ___ X_RM
     // ├──────┤
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     // ├──────┤
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     // ├──────┤
-    X_LB &kp F10 &kp F4 &kp F5 &kp F6 ___ X_MB PIN_APP PIN_WIN DSK_MGR ___ &kp
-        C_POWER X_RB
-            // ├──────┤
-            // ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤
-            // ├──────┤
-            // ├─────────────┼─────────────┼─────────────┴───────────────────────────╯
-            // ├──────┤
-            X_LH ___ ___ X_MH &kp C_MUTE &kp C_PP X_RH
+    X_LB &kp F10 &kp F1 &kp F2 &kp F3 ___ X_MB PIN_APP PIN_WIN DSK_MGR ___ ___ X_RB
+        // ├──────┤
+        // ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤
+        // ├──────┤
+        // ├─────────────┼─────────────┼─────────────┴───────────────────────────╯
+        // ├──────┤
+        X_LH ___ ___ X_MH &kp C_MUTE &kp C_PP X_RH
     // ╰──────╯ ╰─────────────┴─────────────╯ ╰──────╯
     // ╰─────────────┴─────────────╯ ╰──────╯
 )
