@@ -44,6 +44,9 @@ compatible with Zephyr 3.0 is available
   `cd` into your workspace and start building without any setup
 
 ![](draw/keymap.png)
+([Click here](https://raw.githubusercontent.com/urob/zmk-config/refs/heads/main/draw/base.svg)
+for a breakdown by layer - powered by
+[keymap-drawer](https://github.com/caksoylar/keymap-drawer).)
 
 ## Timeless homerow mods
 
