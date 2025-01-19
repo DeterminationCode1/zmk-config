@@ -3,10 +3,10 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - "config/base.keymap"
-      - "config/*.dtsi"
-      - "config/*.h"
-      - "draw/config.yaml"
+      - 'config/base.keymap'
+      - 'config/*.dtsi'
+      - 'config/*.h'
+      - 'draw/config.yaml'
 
 jobs:
   draw:
@@ -14,8 +14,8 @@ jobs:
     permissions:
       contents: write
     with:
-      keymap_patterns: "config/base.keymap"
-      config_path: "draw/config.yaml"
-      output_folder: "draw"
+      keymap_patterns: 'config/base.keymap'
+      config_path: 'draw/config.yaml'
+      output_folder: 'draw'
       parse_args: "base: '--virtual-layers Combos'"
       draw_args: "base: '-k ferris/sweep'"
