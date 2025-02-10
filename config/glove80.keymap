@@ -36,7 +36,7 @@
 
 #define X_LH    &sk LALT &kp BSPC &kp MINUS &kp LEFT &kp RIGHT
 #define X_MH    &kp PG_UP &kp PG_DN
-#define X_RH    &kp UP &kp DOWN &kp LEFT_BRACKET &kp PG_DN &kp PG_UP
+#define X_RH    &kp DOWN &kp UP &kp LEFT_BRACKET &kp PG_DN &kp PG_UP
 
 /* activate bluetooth */
 #define CONFIG_WIRELESS 1
